@@ -9,10 +9,14 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <nav>
-      <div className="logo">
-        <i className="fa-solid fa-house"></i> Home
-      </div>
+    <nav className="navbar">
+      <a href="#home" className="navbar-logo">
+        <span className="logo-icon">
+          <i className="fa-solid fa-house"></i>
+        </span>
+        <span className="logo-text">MyWebsite</span>
+      </a>
+
       <ul className="nav-links">
         {navLinks.map((link) => (
           <li key={link.href}>
@@ -20,6 +24,11 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
+
+      <a href="#contact" className="navbar-cta">
+        Get Started
+        <i className="fa-solid fa-arrow-right"></i>
+      </a>
     </nav>
   );
 }
